@@ -29,6 +29,14 @@ header h1 {
     color: #211904;
     margin: 5px 20px 0;
 }
+/*tablet css*/
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 25px;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+}
 
 nav {
     overflow: hidden;
@@ -47,6 +55,13 @@ nav ul>li {
     margin-top: 10px;
 }
 
+@media screen and (max-width: 600px){
+    nav ul>li{
+        margin-top: 7px;
+        margin-left: 20px;
+}
+}
+
 nav a {
     font-size: 20px;
     display: block;
@@ -56,6 +71,13 @@ nav a {
     transition: 0.3s;
     letter-spacing: 3px;
     float: left;
+}
+
+@media screen and (max-width: 600px) {
+    nav a{
+    font-size: 15px;
+    letter-spacing: 0;
+    }
 }
 
 nav a:hover {
@@ -69,11 +91,21 @@ nav a:hover {
 }
 
 .main {
-    background: url(img/main.JPG);
+    background: url(img/main.JPG) no-repeat;
     background-size: cover;
     min-height: 450px;
     position: relative;
     margin-top: 65px;
+}
+
+
+@media screen and (max-width: 600px){
+    .main{
+        min-height: 300px;
+        -webkit-background-size: contain;
+        background-size: contain;
+        margin-top: 60px;
+    }
 }
 
 .detail {
@@ -82,17 +114,27 @@ nav a:hover {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    color: #332a13;
 }
 
 .detail h1 {
     font-size: 28px;
-    color: #332a13;
 }
 
 .detail p {
     font-size: 18px;
     margin-top: 15px;
     color: #332a13;
+}
+
+@media screen and (max-width: 600px){
+    .detail h1{
+        font-size: 25px;
+}
+    .detail p{
+        font-size: 15px;
+        margin-top: 10px;
+    }
 }
 
 .lesson {
@@ -130,9 +172,11 @@ nav a:hover {
     font-size: 20px;
     transition: 0.3s;
 }
-#tabMenu li .last{
+
+#tabMenu li .last {
     border-right: #332a13 1px solid;
 }
+
 #tabMenu li a:hover {
     background: #5e502e;
     color: #fffaf0;
@@ -275,6 +319,7 @@ nav a:hover {
 .box-apply a:hover {
     color: #B22222;
 }
+
 
 /*
 #tea-lesson {
@@ -463,13 +508,13 @@ nav a:hover {
     height: 100px;
 }
 
-.limited{
+.limited {
     text-align: center;
     color: #332a13;
     font-size: 23px;
 }
 
-.limited a{
+.limited a {
     border: #332a13 1px solid;
     width: 30%;
     margin-left: 35%;
@@ -482,7 +527,7 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.limited a:hover{
+.limited a:hover {
     background: #332a13;
     color: #fffaf0;
 }
@@ -497,7 +542,7 @@ nav a:hover {
     border: #332a13 1px solid;
 }
 
-.button{
+.button {
     width: 1000px;
     overflow: hidden;
     float: left;
@@ -506,7 +551,7 @@ nav a:hover {
     height: 45px;
 }
 
-.button a{
+.button a {
     border: 1px #211904 solid;
     width: 50%;
     height: 45px;
@@ -520,27 +565,27 @@ nav a:hover {
     padding-top: 5px;
 }
 
-.button a:hover{
+.button a:hover {
     background: #332a13;
     color: #fffaf0;
 }
 
-#tea{
+#tea {
     margin-top: 70px;
     padding-top: 70px;
     width: 100%;
     text-align: center;
 }
 
-#tea h1{
+#tea h1 {
     font-size: 25px;
 }
 
-#tea p{
+#tea p {
     font-size: 20px;
 }
 
-.Basic-box{
+.Basic-box {
     width: 46%;
     margin: 2%;
     float: left;
@@ -549,24 +594,24 @@ nav a:hover {
     padding: 20px 3px;
 }
 
-.Basic-box p{
+.Basic-box p {
     font-size: 16px;
 }
 
-.Advanced-box{
+.Advanced-box {
     width: 23%;
     margin: 1%;
     float: left;
     border: 1px #211904 solid;
     font-size: 20px;
-    padding:30px  0px;
+    padding: 30px 0px;
 }
 
-.Advanced-box p{
+.Advanced-box p {
     font-size: 16px;
 }
 
-.Advanced2-box{
+.Advanced2-box {
     width: 30%;
     margin: 1.5%;
     float: left;
@@ -575,21 +620,21 @@ nav a:hover {
     padding: 30px 3px;
 }
 
-.Advanced2-box p{
+.Advanced2-box p {
     font-size: 16px;
 }
 
-#sweet{
+#sweet {
     width: 100%;
     text-align: center;
 }
 
-#sweet h1{
+#sweet h1 {
     margin-top: 50px;
     font-size: 30px;
 }
 
-.Sweet-box{
+.Sweet-box {
     width: 46%;
     margin: 2%;
     float: left;
@@ -598,19 +643,19 @@ nav a:hover {
     padding: 30px 3px;
 }
 
-.Sweet-box p{
+.Sweet-box p {
     font-size: 16px;
 }
 
-.Sweet2-box{
+.Sweet2-box {
     width: 30%;
-    margin:  1.5%;
+    margin: 1.5%;
     float: left;
     border: 1px #211904 solid;
     font-size: 20px;
     padding: 30px 3px;
 }
 
-.Sweet2-box p{
+.Sweet2-box p {
     font-size: 16px;
 }

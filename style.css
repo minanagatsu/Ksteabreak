@@ -57,7 +57,7 @@ nav ul>li {
 
 @media screen and (max-width: 600px){
     nav ul>li{
-        margin-top: 7px;
+        margin-top: 6px;
         margin-left: 20px;
 }
 }
@@ -75,8 +75,8 @@ nav a {
 
 @media screen and (max-width: 600px) {
     nav a{
-    font-size: 15px;
-    letter-spacing: 0;
+    font-size: 17px;
+    letter-spacing: 1px;
     }
 }
 
@@ -102,8 +102,8 @@ nav a:hover {
 @media screen and (max-width: 600px){
     .main{
         min-height: 300px;
-        -webkit-background-size: contain;
-        background-size: contain;
+        -webkit-background-size: cover;
+        background-size: cover;
         margin-top: 60px;
     }
 }
@@ -132,7 +132,7 @@ nav a:hover {
         font-size: 25px;
 }
     .detail p{
-        font-size: 15px;
+        font-size: 17px;
         margin-top: 10px;
     }
 }
@@ -180,6 +180,18 @@ nav a:hover {
 #tabMenu li a:hover {
     background: #5e502e;
     color: #fffaf0;
+}
+
+@media screen and (max-width: 600px){
+    #tabMenu li a{
+        width: 450px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+    #tabMenu li .last{
+        margin-left: -25px;
+    }
 }
 
 #tabBox1 {
@@ -238,6 +250,22 @@ nav a:hover {
 #tabBox2 a:hover {
     background: #5e502e;
     color: #fffaf0;
+}
+
+@media screen and (max-width: 600px){
+    #tabBox1,
+    #tabBox2{
+        width: 900px;
+        padding: 20px;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 20px;
+    }
+    
+    #tabBox1 a,
+    #tabBox2 a{
+        margin-left: 720px;
+    }
 }
 
 .clearfix {
@@ -301,7 +329,7 @@ nav a:hover {
 
 .box-apply {
     padding-top: 10px;
-    width: 15%;
+    width: 15%
     height: 45px;
     float: left;
     border: 1px #332a13 solid;
@@ -320,192 +348,28 @@ nav a:hover {
     color: #B22222;
 }
 
-
-/*
-#tea-lesson {
-    margin-top: 80px;
-    width: 100%;
-    text-align: center;
+@media screen and (max-width: 600px){
+    .box{
+        width: 90%;
+        margin-left: 25px;
+    }
+    .box-apply{
+        width: 15%;
+        height: 45px;
+    }
 }
-
-#tea-lesson h1 {
-    font-size: 30px;
-    color: #332a13;
-}
-
-#tea-lesson p {
-    font-size: 18px;
-}
-
-#tabmenu {
-    margin-top: 30px;
-}
-
-#tabmenu ul {
-    width: 100%;
-}
-
-#tabmenu li {
-    float: left;
-    list-style: none;
-}
-
-#tabmenu li a {
-    display: block;
-    width: 500px;
-    height: 55px;
-    line-height: 50px;
-    text-align: center;
-    border: #332a13 1px solid;
-    text-decoration: none;
-    color: #332a13;
-    padding-top: 2px;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-#tabmenu li a:hover {
-    background: #5e502e;
-    color: #fffaf0;
-}
-
-#tabBox3 {
-    width: 100%;
-    display: none;
-    padding: 20px;
-    font-size: 20px;
-    margin-bottom: 15px;
-    text-align: left;
-    text-align: center;
-    color: #332a13;
-}
-
-#tabBox3 a {
-    width: 150px;
-    text-decoration: none;
-    display: block;
-    line-height: 40px;
-    list-style-type: none;
-    color: #332a13;
-    transition: 0.3s;
-    margin-top: 10px;
-    font-size: 15px;
-}
-
-#tabBox3 a:hover {
-    background: #5e502e;
-    color: #fffffa;
-}
-
-#tabBox4 {
-    width: 100%;
-    height: 600px;
-    display: block;
-    padding: 20px;
-    font-size: 20px;
-    margin-bottom: 50px;
-    text-align: left;
-    text-align: center;
-    color: #332a13;
-}
-
-#tabBox4 a {
-    width: 150px;
-    text-decoration: none;
-    display: block;
-    line-height: 45px;
-    list-style-type: none;
-    color: #332a13;
-    transition: 0.3s;
-    margin-top: 10px;
-    font-size: 15px;
-}
-
-#tabBox4 a:hover {
-    background: #5e502e;
-    color: #fffaf0;
-}
-
-#tabBox3 h2 {
-    font-size: 18px;
-    text-align: center;
-}
-
-#tabBox4 h2 {
-    font-size: 18px;
-    text-align: center;
-}
-
-.teaBasic {
-    width: 46%;
-    margin-top: 50px;
-    float: left;
-    margin: 2%;
-    border: #332a13 1px solid;
-    padding: 5px;
-    border-radius: 3%;
-}
-
-.teaBasic p {
-    text-align: center;
-    font-size: 12px;
-}
-
-.teaAdvanced {
-    width: 23%;
-    margin-top: 50px;
-    float: left;
-    margin: 20px 1%;
-    border: #332a13 1px solid;
-    padding: 5px;
-    border-radius: 3%;
-    /*background: #fffafa;
-    background: #F5FFFA;
-}
-
-.teaAdvanced p {
-    text-align: center;
-    font-size: 12px;
-}
-
-.teaAdvanced2 {
-    width: 30%;
-    margin-top: 50px;
-    float: left;
-    margin: 15px 1.5%;
-    border: #332a13 1px solid;
-    padding: 5px;
-    border-radius: 3%;
-    background: #fffafa;
-    background: #F5FFFA;
-}
-
-.teaAdvanced2 p {
-    text-align: center;
-    font-size: 12px;
-}
-
-.british {
-    width: 44%;
-    margin-top: 50px;
-    float: left;
-    margin: 3%;
-    border: #332a13 1px solid;
-    padding: 5px;
-    border-radius: 5%;
-}
-
-.british p {
-    text-align: center;
-    font-size: 12px;
-}
-*/
 
 .lesson-box {
     width: 100%;
     margin-top: 90px;
     margin-bottom: 20px;
     height: 100px;
+}
+
+@media screen and (max-width: 600px){
+    .lesson-box{
+        width: 90%;
+    }
 }
 
 .limited {
@@ -570,6 +434,14 @@ nav a:hover {
     color: #fffaf0;
 }
 
+@media screen and (max-width: 600px){
+    .button{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
 #tea {
     margin-top: 70px;
     padding-top: 70px;
@@ -583,6 +455,16 @@ nav a:hover {
 
 #tea p {
     font-size: 20px;
+}
+
+@media screen and (max-width: 600px){
+    #tea{
+        width: 90%;
+        margin-left: 5%;
+    }
+    #tea p{
+        font-size: 17px;
+    }
 }
 
 .Basic-box {
@@ -624,6 +506,27 @@ nav a:hover {
     font-size: 16px;
 }
 
+@media screen and (max-width: 600px){
+    .Basic-box{
+        width: 44%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    
+    .Advanced-box{
+        width: 44%;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding: 20px 0px;
+    }
+    
+    .Advanced2-box{
+        width: 29%;
+        margin-left: 3%;
+        margin-right: 1%;
+    }
+}
+
 #sweet {
     width: 100%;
     text-align: center;
@@ -632,6 +535,17 @@ nav a:hover {
 #sweet h1 {
     margin-top: 50px;
     font-size: 30px;
+}
+
+@media screen and (max-width: 600px){
+    #sweet{
+        width: 90%;
+        margin-left: 5%;
+    }
+    #sweet h1{
+        margin-top: 50px;
+        text-align: center;
+    }
 }
 
 .Sweet-box {
@@ -658,4 +572,18 @@ nav a:hover {
 
 .Sweet2-box p {
     font-size: 16px;
+}
+
+@media screen and (max-width: 600px){
+    .Sweet-box{
+        width: 44%;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    
+    .Sweet2-box{
+        width: 29%;
+        margin-left: 3%;
+        margin-right: 1%;
+    }
 }

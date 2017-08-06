@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ks tea break</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>K's Tea Break</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lesson.html">Lesson</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            
+            <script>
+                $(function(){
+                    $win = $(window),
+                    $header = $('header')
+                    headerHeight = $header.outerHeight(),
+                    startPos = 0;
+                    
+                    $win.on('load scroll', function(){
+                        var value= $(this).scrollTop();
+                        if ( value > startPos && value > headerHeight){
+                            $header.css('top', '-' + headerHeight + 'px'); 
+                        }else{
+                            $header.css('top', '0');
+                        }
+                        startPos = value;
+                    });
+                });
+            </script>
+        </header>
+
+       <div class="container">
+        <div class="googleform">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2sCY8SA3-wlYYJhYPKoOaftn1mdJbPkf3nRiVWXifJUw2eg/viewform?embedded=true" width="450" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="googleform-box">読み込んでいます...</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzRNjldzCyBz7YCwiM0JiOjHLBWFua7JUb_U-7SFU6xWINqA/viewform?embedded=true" width="450" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="googleform-box">読み込んでいます...</iframe>
+        </div>
+        </div>
+    </body>
+</html>

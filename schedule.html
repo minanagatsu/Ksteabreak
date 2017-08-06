@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ks tea break</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>K's Tea Break</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lesson.html">Lesson</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <script>
+                $(function(){
+                    $win = $(window),
+                        $header = $('header')
+                    headerHeight = $header.outerHeight(),
+                        startPos = 0;
+
+                    $win.on('load scroll', function(){
+                        var value= $(this).scrollTop();
+                        if ( value > startPos && value > headerHeight){
+                            $header.css('top', '-' + headerHeight + 'px'); 
+                        }else{
+                            $header.css('top', '0');
+                        }
+                        startPos = value;
+                    });
+                });
+            </script>
+        </header>
+        
+        <div class="container">
+                <div class="lesson-box">
+                    <div class="box-date">日付</div>
+                    <div class="box-lesson">レッスン詳細</div>
+                    <div class="box-charge">料金</div>
+                    <div class="box-apply">申し込み</div>
+                    
+                    <div class="box-date">-</div>
+                    <div class="box-lesson">-</div>
+                    <div class="box-charge">-</div>
+                    <div class="box-apply">-</div>
+                    
+                    <!--<div class="box-date">2017/09/03(日)</div>
+                    <div class="box-lesson">Basic1 -紅茶の基礎知識とホットティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply">満員</div>
+
+                    <div class="box-date">2017/09/05(火)</div>
+                    <div class="box-lesson">英国菓子 -スコーン-</div>
+                    <div class="box-charge">¥5000</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/07(木)</div>
+                    <div class="box-lesson">Basic3 -産地の紅茶とアイスティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/09(土)</div>
+                    <div class="box-lesson">Advanced2 -紅茶とミルク-</div>
+                    <div class="box-charge">¥4500</div>
+                    <div class="box-apply">満員</div>
+                    
+                    <div class="box-date">2017/09/03(日)</div>
+                    <div class="box-lesson">Basic1 -紅茶の基礎知識とホットティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply">満員</div>
+
+                    <div class="box-date">2017/09/05(火)</div>
+                    <div class="box-lesson">英国菓子 -スコーン-</div>
+                    <div class="box-charge">¥5000</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/07(木)</div>
+                    <div class="box-lesson">Basic3 -産地の紅茶とアイスティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/09(土)</div>
+                    <div class="box-lesson">Advanced2 -紅茶とミルク-</div>
+                    <div class="box-charge">¥4500</div>
+                    <div class="box-apply">満員</div>
+                    
+                    <div class="box-date">2017/09/03(日)</div>
+                    <div class="box-lesson">Basic1 -紅茶の基礎知識とホットティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply">満員</div>
+
+                    <div class="box-date">2017/09/05(火)</div>
+                    <div class="box-lesson">英国菓子 -スコーン-</div>
+                    <div class="box-charge">¥5000</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/07(木)</div>
+                    <div class="box-lesson">Basic3 -産地の紅茶とアイスティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/09(土)</div>
+                    <div class="box-lesson">Advanced2 -紅茶とミルク-</div>
+                    <div class="box-charge">¥4500</div>
+                    <div class="box-apply">満員</div>
+
+                    <div class="box-date">2017/09/03(日)</div>
+                    <div class="box-lesson">Basic1 -紅茶の基礎知識とホットティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply">満員</div>
+
+                    <div class="box-date">2017/09/05(火)</div>
+                    <div class="box-lesson">英国菓子 -スコーン-</div>
+                    <div class="box-charge">¥5000</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/07(木)</div>
+                    <div class="box-lesson">Basic3 -産地の紅茶とアイスティーの淹れ方-</div>
+                    <div class="box-charge">¥3500</div>
+                    <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                    <div class="box-date">2017/09/09(土)</div>
+                    <div class="box-lesson">Advanced2 -紅茶とミルク-</div>
+                    <div class="box-charge">¥4500</div>
+                    <div class="box-apply">満員</div>-->
+            </div>
+                    
+                    <div class="limited">
+                        9月頃から始める予定です。
+                        <br>質問等ありましたら、ぜひお問い合わせください。
+                        <br><a href="contact.html">お問い合わせ</a>
+                    </div>
+            </div>
+        
+    </body>
+</html>

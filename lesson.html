@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ks tea break</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>K's Tea Break</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        
+        <script>
+            $(function(){
+                $win = $(window),
+                    $header = $('header')
+                headerHeight = $header.outerHeight(),
+                    startPos = 0;
+
+                $win.on('load scroll', function(){
+                    var value= $(this).scrollTop();
+                    if ( value > startPos && value > headerHeight){
+                        $header.css('top', '-' + headerHeight + 'px'); 
+                    }else{
+                        $header.css('top', '0');
+                    }
+                    startPos = value;
+                });
+            });
+        </script>
+    </header>
+
+    <div class="container">
+       <div class="button">
+           <a href="#tea">紅茶レッスン</a>
+           <a href="#sweet">お菓子レッスン</a>
+       </div>
+       
+       <div id="tea">
+           <h1>紅茶レッスン</h1>
+           <p>BasicとAdvancedの2つのコースがあり、Basicを全て受講した方がAdvancedを受講できます。
+               <br>また、毎回のレッスン後に、ティータイムがあります。
+               <br>こちらで英国菓子もご用意させていただきますので、紅茶とともにお楽しみください。
+           </p>
+           <div class="Basic-box">
+               Basic1
+               <p>紅茶の基礎知識と
+                   <br>ホットティーの美味しい淹れ方
+                   <br>¥3500</p>
+           </div>
+           <div class="Basic-box">
+               Basic2
+               <p>紅茶の製造工程とティーバッグの
+                   <br>美味しい淹れ方、ロイヤルミルクティー
+                   <br>¥3500</p>
+           </div>
+           <div class="Basic-box">
+               Basic3
+               <p>紅茶の産地とアイスティーの美味しい淹れ方
+                   <br>¥3500</p>
+           </div>
+           <div class="Basic-box">
+               Basic4
+               <p>紅茶の産地 インドver.
+                   <br>¥3500</p>
+           </div>
+           <div class="Basic-box">
+               Basic5
+               <p>紅茶の産地 スリランカver.
+                   <br>¥3500</p>
+           </div>
+           <div class="Basic-box">
+               Basic6
+               <p>紅茶の産地 中国・ケニア・インドネシアver.
+                   <br>¥3500</p>
+           </div>
+           
+           <div class="Advanced-box">
+               Advanced1
+               <p>紅茶と水
+                   <br>¥4500</p>
+           </div>
+           <div class="Advanced-box">
+               Advanced2
+               <p>紅茶とミルク
+                   <br>¥4500</p>
+           </div>
+           <div class="Advanced-box">
+           Advanced3
+           <p>紅茶とハーブ
+               <br>¥4500</p>
+           </div>
+           <div class="Advanced-box">
+           Advanced4
+           <p>紅茶とスパイス
+               <br>¥4500</p>
+           </div>
+           <div class="Advanced2-box">
+           Advanced5
+           <p>紅茶とはちみつ
+               <br>¥5000</p>
+           </div>
+           <div class="Advanced2-box">
+           Advanced6
+           <p>紅茶とチョコレート
+               <br>¥5000</p>
+           </div>
+           <div class="Advanced2-box">
+           Advanced7
+           <p>紅茶とチーズ
+               <br>¥5000</p>
+           </div>
+       </div>
+       
+        <div id="sweet">
+            <h1>お菓子レッスン</h1>
+            <p>紅茶に合う英国菓子を作ります。また、作ったお菓子はお持ち帰りとなります。</p>
+            <div class="Sweet-box">
+                スコーン
+                <p>¥5000</p>
+            </div>
+            <div class="Sweet-box">
+                ヴィクトリアサンドイッチケーキ
+                <p>¥5000</p>
+            </div>
+            <div class="Sweet2-box">
+                ショートブレッド
+                <p>¥5000</p>
+            </div>
+            <div class="Sweet2-box">
+                カップケーキ
+                <p>¥5000</p>
+            </div>
+            <div class="Sweet2-box">
+                イートンメス
+                <p>¥5000</p>
+            </div>
+            <div class="Sweet-box">
+                サマープティング
+                <p>¥5000</p>
+            </div>
+            <div class="Sweet-box">
+                マデイラケーキ
+                <p>¥5000</p>
+            </div>
+        </div>
+        <!--<div id="tea-lesson">
+
+            <ul id="tabmenu" class="clearfix">
+                <li><a href="#tabBox3">紅茶レッスン</a></li>
+                <li><a href="#tabBox4">お菓子レッスン</a></li>
+            </ul>
+            <div id="tabBoxes">
+                <div id="tabBox3">
+                    <h1>紅茶レッスン</h1>
+                    <p>BasicとAdvancedの2つのコースがあり、Basicを全て受講した方がAdvancedを受講できます。
+                        <br>また、毎回のレッスン後に、ティータイムがあります。
+                        <br>こちらで英国菓子もご用意させていただきますので、紅茶とともにお楽しみください。
+                    </p>
+
+                    <h1><br>Basicコース</h1>
+                    <h2 class="teaBasic">
+                        Basic1
+                        <br>紅茶の基礎知識と
+                        <br>ホットティーの美味しい淹れ方
+                        <p>¥3500</p>
+                    </h2>
+                    <h2 class="teaBasic">
+                        Basic2
+                        <br>紅茶の製造工程とティーバッグの
+                        <br>美味しい淹れ方、ロイヤルミルクティー
+                        <p>¥3500</p>
+                    </h2>
+                    <h2 class="teaBasic">
+                        Basic3
+                        <br>紅茶の産地と
+                        <br>アイスティーの美味しい淹れ方
+                        <p>¥3500</p>
+                    </h2>
+                    <h2 class="teaBasic">
+                        Basic4
+                        <br>紅茶の産地
+                        <br>インドver.
+                        <p>¥3500</p>
+                    </h2>
+                    <h2 class="teaBasic">
+                        Basic5
+                        <br>紅茶の産地
+                        <br>スリランカver.
+                        <p>¥3500</p>
+                    </h2>
+                    <h2 class="teaBasic">
+                        Basic6
+                        <br>紅茶の産地
+                        <br>中国・ケニア・インドネシアver.
+                        <p>¥3500</p>
+                    </h2>
+
+                    <h1><br>Advancedコース</h1>
+                    <h2 class="teaAdvanced">
+                        Advanced1
+                        <br>紅茶と水
+                        <p>¥4500</p>
+                    </h2>
+                    <h2 class="teaAdvanced">
+                        Advanced2
+                        <br>紅茶とミルク
+                        <p>¥4500</p>
+                    </h2>
+                    <h2 class="teaAdvanced">
+                        Advanced3
+                        <br>紅茶とハーブ
+                        <p>¥4500</p>
+                    </h2>
+                    <h2 class="teaAdvanced">
+                        Advanced4
+                        <br>紅茶とスパイス
+                        <p>¥4500</p>
+                    </h2>
+                    <h2 class="teaAdvanced2">
+                        Advanced5
+                        <br>紅茶とはちみつ
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="teaAdvanced2">
+                        Advanced6
+                        <br>紅茶とチョコレート
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="teaAdvanced2">
+                        Advanced7
+                        <br>紅茶とチーズ
+                        <p>¥5000</p>
+                    </h2>
+                </div>
+
+                <div id="tabBox4">
+                    <h1>お菓子レッスン</h1>
+                    <p>紅茶に合う英国菓子を作ります。また、作ったお菓子はお持ち帰りとなります。</p>
+
+                    <h2 class="british">
+                        スコーン
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="british">
+                        ヴィクトリアサンドイッチケーキ
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="british">
+                        ショートブレッド
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="british">
+                        カップケーキ
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="british">
+                        イートンメス
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="british">
+                        サマープティング
+                        <p>¥5000</p>
+                    </h2>
+                    <h2 class="british">
+                        マデイラケーキ
+                        <p>¥5000</p>
+                    </h2>
+                </div>
+            </div>
+
+            <script>
+                $(function() {
+                    $("#tabmenu li a").on("click", function() {
+                        $("#tabBoxes div").hide();
+                        $($(this).attr("href")).fadeToggle();
+                    });
+                    return false;
+                });
+            </script>
+        </div>-->
+    </div>
+</body>
+
+</html>

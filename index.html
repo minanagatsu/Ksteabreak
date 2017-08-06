@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ks tea break</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+   <header>
+        <h1>K's Tea Break</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+       <script>
+           $(function(){
+               $win = $(window),
+                   $header = $('header')
+               headerHeight = $header.outerHeight(),
+                   startPos = 0;
+
+               $win.on('load scroll', function(){
+                   var value= $(this).scrollTop();
+                   if ( value > startPos && value > headerHeight){
+                       $header.css('top', '-' + headerHeight + 'px'); 
+                   }else{
+                       $header.css('top', '0');
+                   }
+                   startPos = value;
+               });
+           });
+       </script>
+    </header>
+
+    <div class="container">
+        <div class="main"></div>
+
+        <div class="detail">
+            <h1>美味しい紅茶と手作り菓子で楽しい一時を</h1>
+            <p>
+                紅茶の美味しい淹れ方やカフェのようなアレンジティー、
+                <br>産地別紅茶の楽しみ方を学べます。またティータイムに合わせる
+                <br>手軽で素材が分かる手作りお菓子なども学べる紅茶とお菓子の教室です。
+            </p>
+        </div>
+
+        <div class="lesson">
+            <h1>レッスン内容</h1>
+
+            <ul id="tabMenu" class="clearfix">
+                <li><a href="#tabBox1">紅茶レッスン</a></li>
+                <li><a class="last" href="#tabBox2">お菓子レッスン</a></li>
+            </ul>
+
+            <div id="tabBoxes">
+                <div id="tabBox1">
+                    紅茶レッスンは、BasicとAdvancedの2つに分かれています。
+                    <br><br>Basicでは全6レッスンあり、紅茶の基礎知識を学んだりロイヤルミルクティーや
+                    <br>ホットティー、アイスティーの美味しい淹れ方をマスターするのはもちろんのこと、
+                    <br>紅茶の産地の飲み比べができ、特徴を知ることもできるコースです。
+                    <br>6レッスン全て受講した方がAdvancedを受講できます。
+
+                    <br><br>Advancedでは、全7レッスンあり、硬水で淹れる紅茶と軟水で淹れる紅茶など
+                    <br>毎レッスン飲み比べることができます。そのため自分に合った、自分だけの紅茶を
+                    <br>見つけることができ、紅茶の美味しさを深く追求することができるコースです。
+
+                    <br><a href="lesson.html#tea">詳しくはこちら！</a>
+
+                </div>
+
+                <div id="tabBox2">
+                    お菓子レッスンでは、主に英国菓子を作るレッスンとなります。
+                    <br><br>全7レッスンあり、スコーンやヴィクトリアサンドイッチケーキ、
+                    <br>ショートブレッド、カップケーキ、イートンメス、サマープディング、
+                    <br>マディラケーキなどを学ぶことができます。どれも紅茶が合うレッスンに
+                    <br>なるので紅茶レッスンと平行して受講することをおすすめします。
+
+                    <br><a href="lesson.html#sweet">詳しくはこちら！</a>
+                </div>
+            </div>
+
+            <script>
+                $(function() {
+                    $("#tabMenu li a").on("click", function() {
+                        $("#tabBoxes div").hide();
+                        $($(this).attr("href")).fadeToggle();
+                    });
+                    return false;
+                });
+            </script>
+        </div>
+
+        <div class="topic">
+            <h1>近日開催のレッスン</h1>
+            <div class="box">
+                <div class="box-date">日付</div>
+                <div class="box-lesson">レッスン詳細</div>
+                <div class="box-charge">料金</div>
+                <div class="box-apply">申し込み</div>
+                
+                <div class="box-date">-</div>
+                <div class="box-lesson">-</div>
+                <div class="box-charge">-</div>
+                <div class="box-apply">-</div>
+                
+                <div class="box-date">-</div>
+                <div class="box-lesson">-</div>
+                <div class="box-charge">-</div>
+                <div class="box-apply">-</div>
+                
+                <div class="box-date">-</div>
+                <div class="box-lesson">-</div>
+                <div class="box-charge">-</div>
+                <div class="box-apply">-</div>
+                
+                <div class="box-date">-</div>
+                <div class="box-lesson">-</div>
+                <div class="box-charge">-</div>
+                <div class="box-apply">-</div>
+
+                <!--
+                <div class="box-date">2017/09/03(日)</div>
+                <div class="box-lesson">Basic1 -紅茶の基礎知識とホットティーの淹れ方-</div>
+                <div class="box-charge">¥3500</div>
+                <div class="box-apply">満員</div>
+
+                <div class="box-date">2017/09/5(火)</div>
+                <div class="box-lesson">英国菓子 -スコーン-</div>
+                <div class="box-charge">¥5000</div>
+                <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                <div class="box-date">2017/09/07(木)</div>
+                <div class="box-lesson">Basic3 -産地の紅茶とアイスティーの淹れ方-</div>
+                <div class="box-charge">¥3500</div>
+                <div class="box-apply"><a href="contact.html">申し込み</a></div>
+
+                <div class="box-date">2017/09/09(土)</div>
+                <div class="box-lesson">Advanced2 -紅茶とミルク-</div>
+                <div class="box-charge">¥4500</div>
+                <div class="box-apply">満員</div>
+                -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
